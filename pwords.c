@@ -132,11 +132,11 @@ main( int argc, char *argv[] ) {
     getchar();
   }  
  
-  for(count=0;count<4;count++)
-    pthread_create(&thread[count],NULL,threadF, share);
+//  for(count=0;count<4;count++)
+    pthread_create(&thread1,NULL,threadF, share);
   
-  for(count=0;count<4;count++)
-    pthread_join(thread[count], NULL);
+  //for(count=0;count<4;count++)
+    pthread_join(thread1, NULL);
     
   print_dict( share->d );
   fclose( infile );
